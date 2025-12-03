@@ -1,0 +1,15 @@
+def turn_right():
+    turn_left()
+    turn_left()
+    turn_left()
+
+def move_n_steps(n):
+    for _ in range(n):
+        if front_is_clear():
+            move()
+        else:
+            break
+
+for _ in range(4):
+    move_n_steps(9)  # 因為起點已在第一格，走9步等於跨10格
+    turn_left()  
